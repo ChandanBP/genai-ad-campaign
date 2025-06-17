@@ -1,0 +1,7 @@
+default:
+  model: gemini-1.5-pro
+  provider: google
+  temperature: 0.4
+  top_p: 1.0
+  top_k: 40
+  max_output_tokens: 1024

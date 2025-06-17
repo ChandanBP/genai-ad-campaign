@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "adcampaign-461015",
+  "private_key_id": "a0eae825a235e42673e29e0b1642b1fb7a23c7c5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCkIaZSdP8Jpd9n\nXymtst/ysUatfX9GyYWWGepZHcWXebrf117ifYizAPAh/muLKQ4F5+F8zEX0mM6A\nK7voZDnMKqP3kJ9EVONAXFAIZXB8PcFwi04ekUIzdqMYGHUZouO22516hj+AnACk\nbkQoxLCXZr3PBtw7gGqz7yPTfL8kFK3Rjo6JFQ+EFWNgM93LtZhM3ROSYNWImkJi\nhnXI9mjTCQxTHTOI3fgFyCLtNTz/Ponhc2Wa9vgN/dCwBB+DFpKud05rrzInyWnE\nPa/l5fvVlIIGnuWMaSgGt3XCNk7OzAMu0326uqB630gMi233Y+X0abDiGDX1AT1a\n3kARPITJAgMBAAECggEAQoF+DwBoTUUAmrblQQRvmTv7CxaEia7jqdgzbMvTAldp\ngQUYZgb+6qWRJ/0bH6bRj1QPus1c9Ukrt6TA/eAKyW9nxEs+NeZ9tNkS9uv/oeA2\nLz/LNjiezhKe8IcMgAhQZApmK70VIyxTWE1z4d8dPSP8+lPpzlRxKBrY9fugyeHO\nUkjwDS7hfk8XBDzXRchhXCB1A4SZ8NRjVJtKekngeRgs5TPHNF0EHJ2u5hX7Cv9a\n6KzjrYGkNT4qCB8XujLrMyQ6z1liV6XovP0sOI1xuMYApcZb7Cn12xLhnBEi0wwV\ns3zgVznLEZ7awES1U3pMrnZrQR/2ktTEhy1LxgJCrwKBgQDhhEPlXKIrJtMc8y11\nyrEjcx8uwpTjm+XQjANcPFvNgCME82ueZ1elTkF/nQCY+G4W38yuJcA+NIjitqTY\nAx/OfdrILYiySFQxreEd6Vzw4gHopwT5A2A+jHQC0KFfdQJr3qRff2cqJiVhoFwW\nJyshe8WhapsHKSLBZcpx3n1K4wKBgQC6UTjrbfHj4qFM1CDR/egvasLI6wY18Q8e\nZbiCrLn386vdZZPM0iof5bp/R89oaq7JX2J9V87hOxCcdDTNH9+7a+slOSF8GTM/\nYFYg61rb22cM4mKCoMKsZaQNMmK0sDyZ1pd0m1nDmkuaZh3oZ51nmFxl4sNNuVyH\n8Mx/Wl9lYwKBgD9t1S7wxAgBDoXo+9NSpEoFOjMLtZbjJVtn1hYeP+/n53GgCZfv\nFx6+iPucrCtaTJSQc+BTa+PTIOErX+gF0O9iRKPi8ry6TTv/3P5twZ9a4hCO0X48\nbdiJ5qNYDNttbLXsVC0sB1c6jW8NDHmKoL31Mxv4gQwdjNH6kFtAqdrjAoGBAKpj\naSh07Ye4VEbMoA8qotHqUqQnuxBNmcP0xp5Kk+/b2cqpAFeJw5hUIRARfe5B0gK6\nxnlWeg2kVHagF0GX6qWd9feena695Q4KbfnBAuCZb05rIifQGPhMI5EmCPqxSVpu\n0yeCgr7NNmLHDIbjayG4Rpeun2lPIP35CytUXHV9AoGAXB/TNYo0I9wZIlME9znM\n67of68NiOAG2edW7/DxCzg5DN2J5mCz39PD1ye+mFq7r84v5Xg5PCfXT9yaBm9iT\nrJJ5Nql40xXCAFhOYQTv6BVREzj4EXAAIpZ7GBhupQyHATT7L9EOn/NogevLDSVl\nQ/469Xr5jAlLmabz/HIpBOA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "adcampaignservice@adcampaign-461015.iam.gserviceaccount.com",
+  "client_id": "113249417061862900364",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/adcampaignservice%40adcampaign-461015.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,63 @@
+Project Title
+AdAura: GenAI-Powered Influencer Ad Campaigns
+
+Overview
+AdAura is an intelligent multi-agent system that automates end-to-end ad campaign creation tailored for social media. It integrates Google Cloud’s Agent Development Kit (ADK), Gemini, and Veo to discover influencers, generate personalized ad copy, promotional images, and actual promotional videos—all from a single product description.
+
+💡 Features & Functionality
+Multi-Agent Pipeline using ADK:
+
+Influencer Finder Agent: Identifies influencers relevant to a product.
+
+Ad Content Generator Agent: Crafts ad text and images using Gemini.
+
+Video Generator Agent: Uses Google Veo to create real AI-generated video ads.
+
+Campaign Coordinator Agent: Orchestrates the full workflow and manages session state.
+
+Ad Personalization:
+
+Generated ads are aligned to the tone and bio of each influencer.
+
+AI-Generated Visuals & Media:
+
+Gemini Flash creates compelling copy and visuals.
+
+Veo generates rich, short-form video ads suitable for platforms like TikTok and Instagram Reels.
+
+Asset Export:
+
+Each campaign's assets (text, image, video) are stored in Google Cloud Storage for future use.
+
+🧰 Technologies Used
+Google Cloud ADK (Agent Development Kit)
+
+Gemini 1.5 Flash (via Vertex AI)
+
+Veo (veo-2.0-generate-001 for video generation)
+
+Google Cloud Storage (GCS)
+
+Python
+
+Pydantic, MoviePy (for fallback video assembly)
+
+🔗 Data Sources
+Mock Influencer Data:
+
+Simulated Twitter-style handles and bios
+
+Engagement stats (followers, likes) used for ranking
+
+Product Input:
+
+Manually entered or passed as state to simulate real product campaign
+
+🤖 What We Learned
+The ADK makes it extremely easy to model multi-agent GenAI systems using clean stateful orchestration.
+
+Video generation with Veo is powerful but has latency and storage requirements that must be handled gracefully.
+
+Working with GCP services (Vertex AI, GCS) taught us how to stitch GenAI outputs into a real-world automation workflow.
+
+Personalization using influencer tone and bios adds tremendous value to ad content realism.
