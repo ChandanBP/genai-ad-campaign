@@ -6,5 +6,4 @@ __pycache__/
 .vscode/
 application_default_credentials.json
 *.mp4
-*.png
 assets/

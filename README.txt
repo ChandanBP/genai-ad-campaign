@@ -72,3 +72,18 @@ adk run agents
 
 Step 3: Or run the FastAPI server
 uvicorn api:app --host 0.0.0.0 --port 8000
+
+
+Git Repo: https://github.com/ChandanBP/genai-ad-campaign
+
+
+NOTE: Twitter API are used to fetch real time social media data, however since the account used is free tier,
+number of api hits are limited and mock data has been used. We can replace the twitter account credentials which
+has abundant api limits and run the project.
+
+
+Given the above situation, right now the mock data is for protein bar data and api hit from postman will generate
+ad content related to health only.
+
+We need to replace twitter api credentials, to get more api credits and hence experience real time data along with
+ad content.
