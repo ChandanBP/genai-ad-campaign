@@ -56,7 +56,7 @@ This project automates the generation of influencer-driven ad campaigns using Go
 ### Sample cURL Request
 
 ```bash
-curl --location 'https://adk-api-757787387443.us-central1.run.app/generate_campaign' \
+curl --location 'https://adk-agent-api-757787387443.us-central1.run.app/generate_campaign' \
 --header 'Content-Type: application/json' \
 --data '{
   "description": "A new vegan protein bar packed with 25g protein, zero sugar, and high fiber, designed for fitness enthusiasts and millennials."

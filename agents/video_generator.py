@@ -19,12 +19,11 @@ class VideoGenerator:
             self.credentials_path,
             scopes=["https://www.googleapis.com/auth/cloud-platform"],
         )
-        creds.refresh(Request())
+        #creds.refresh(Request())
         return genai.Client(
             vertexai=True,
             project=self.project_id,
-            location=self.location,
-            credentials=creds,
+            location=self.location
         )
 
     def generate_video(self, prompt: str, influencer_handle: str, output_gcs: str = "", duration_seconds: int = 8):

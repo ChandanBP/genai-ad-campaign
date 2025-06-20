@@ -52,8 +52,9 @@ class ProductInfoAgent(BaseAgent):
         }}
         """
 
+        response = None
         try:
-            response = await self._model.generate_content_async(prompt)
+            response = self._model.generate_content(prompt)
             data = response.text.strip()
 
             if data.startswith("```json"):

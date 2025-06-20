@@ -1,6 +1,7 @@
 # agents/ad_content_generator_agent.py
 
 from google.adk.agents import BaseAgent
+from google.cloud import storage
 from agents.video_generator import VideoGenerator
 from google.oauth2 import service_account
 from pydantic import BaseModel, Field
@@ -8,6 +9,7 @@ from typing import List, Dict, Optional
 import vertexai
 from vertexai.generative_models import GenerativeModel
 from vertexai.vision_models import ImageGenerationModel
+from vertexai.generative_models import GenerativeModel
 import os
 import base64
 import shutil
@@ -71,6 +73,15 @@ class AdContentGenerator(BaseAgent):
         with open(save_path, "wb") as f:
             f.write(image_bytes)
 
+    def upload_to_gcs(self, local_path: str, bucket_name: str, destination_blob_name: str) -> str:
+        storage_client = storage.Client()
+        bucket = storage_client.bucket(bucket_name)
+        blob = bucket.blob(destination_blob_name)
+        blob.upload_from_filename(local_path)
+        blob.make_public()
+        print(f"Uploaded {local_path} to GCS: {blob.public_url}")
+        return blob.public_url
+
     def generate_ad_content(self, product, influencers):
         if isinstance(product, dict):
             product = ProductInfo(**product)
@@ -82,8 +93,7 @@ class AdContentGenerator(BaseAgent):
 
         vertexai.init(
             project="adcampaign-461015",
-            location="us-central1",
-            credentials=credentials
+            location="us-central1"
         )
 
         model = GenerativeModel("gemini-2.0-flash-001")
@@ -110,13 +120,16 @@ class AdContentGenerator(BaseAgent):
             
             # Image Generation Prompt
             image_prompt = f"Create a vibrant promotional image for {product.name} featuring {', '.join(product.features)} for {product.target_audience}."
-
+            image_gcs_url = None
             try:
                 img_response = image_model.generate_images(prompt=image_prompt, number_of_images=1)
                 image = img_response.images[0]
                 image_path = f"campaign_assets/{influencer.handle.strip('@')}_ad_image.png"
                 os.makedirs(os.path.dirname(image_path), exist_ok=True)
                 image.save(image_path)
+
+                image_gcs_path = f"campaign_assets/{product.name.replace(' ', '_')}/{influencer.handle.strip('@')}_ad_image.png"
+                image_gcs_url = self.upload_to_gcs(image_path, bucket_name="adcampaign-461015-image-output", destination_blob_name=image_gcs_path)
             except Exception as e:
                 print(f"⚠️ Image generation failed for {influencer.handle}: {e}")
                 image_path = None
@@ -150,7 +163,7 @@ class AdContentGenerator(BaseAgent):
 
             ads[influencer.handle] = {
                 "ad_text": ad_text,
-                "image_path": image_path,
+                "image_path": image_gcs_url,
                 "video_script": video_prompt,
                 "video_path":video_path
             }
