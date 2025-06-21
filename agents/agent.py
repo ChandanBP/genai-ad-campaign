@@ -17,7 +17,7 @@ root_agent = SequentialAgent(
     name="AdCampaignPipeline", # Name is still useful for logging/identification
     description="Sequential pipeline to generate a personalized ad campaign.",
     sub_agents=[
-        ProductInfoAgent(), # Pass an instance of SimpleAgent
+        ProductInfoAgent(),
         SocialMetricsAgent(),
         InfluencerDiscoveryAgent(),
         AdContentGenerator(),

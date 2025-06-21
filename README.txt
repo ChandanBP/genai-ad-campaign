@@ -77,6 +77,18 @@ uvicorn api:app --host 0.0.0.0 --port 8000
 Git Repo: https://github.com/ChandanBP/genai-ad-campaign
 
 
+### Docker build and deploy
+docker build -t gcr.io/adcampaign-461015/adk-agent-api --platform=linux/amd64 .
+docker push gcr.io/adcampaign-461015/adk-agent-api
+
+gcloud run deploy adk-agent-api \
+  --image=gcr.io/adcampaign-461015/adk-agent-api \
+  --platform=managed \
+  --region=us-central1 \
+  --allow-unauthenticated \
+  --timeout=3600 \
+  --memory=2Gi
+
 NOTE: Twitter API are used to fetch real time social media data, however since the account used is free tier,
 number of api hits are limited and mock data has been used. We can replace the twitter account credentials which
 has abundant api limits and run the project.
