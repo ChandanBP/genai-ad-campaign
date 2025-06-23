@@ -89,6 +89,12 @@ gcloud run deploy adk-agent-api \
   --timeout=3600 \
   --memory=2Gi
 
+Youtube video Link: https://youtu.be/loBsefK2CTA
+
+GCS Buckets: 
+Video - adcampaign-461015-veo-output
+Image - adcampaign-461015-image-output
+
 NOTE: Twitter API are used to fetch real time social media data, however since the account used is free tier,
 number of api hits are limited and mock data has been used. We can replace the twitter account credentials which
 has abundant api limits and run the project.
